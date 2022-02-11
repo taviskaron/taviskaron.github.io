@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400;1,700&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+* {
+    box-sizing: border-box;
+    outline: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+body {
+    font-family: "Open Sans", Helvetica, HelveticaNeue, HelveticaNeueCyr, "Noto Sans", sans-serif;
+    background-color: #fafafa;
+    padding: 0;
+    margin: 0;
+}
+
+#main-wrapper {
+    padding: 0 30px;
+    margin: 0 auto;
+    width: 768px;
+}
+
+a {
+    color: #007777;
+    text-decoration: none;
+}
+
+a:hover {
+    color:#990000;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: Lora, Garamond, serif;
+}
+
+
+h3 {
+    font-size: 16pt;
+    margin-bottom: 15px;
+}
+
+h4 {
+    font-size: 14pt;
+}
+
+#info-links ul {
+    margin: 15px 0 0 0;
+}
+
+#info-links ul li {
+    display: inline;
+    margin-right: 25px;
+    line-height: 30px;
+}
+
+#info-links ul li a i {
+    margin-right: 5px;
+}
+
+.links ul li a {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.links ul li p {
+    padding-top: 0;
+    margin-top: 5px;
+    color: #333333;
+    font-size: 10pt;
+}
+
+section#main {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+}
+
+section#main > div {
+    flex-basis: 50%;
+    margin-right: 90px;
+}
+
+section#info {
+    margin-bottom: 60px;
+    border-bottom: 1px solid #cecece;
+    padding: 30px 0 15px 0;
+}
+
+section#info p {
+    padding: 0;
+    margin: 0;
+    font-size: 12pt;
+    color: #333333;
+}
+
+@media screen and (max-width: 850px){
+    section#main {
+        flex-direction: column;
+    }
+
+    #main-wrapper {
+        width: 100%;
+        padding: 0 40px;
+    }
+
+    #info-links ul li {
+        line-height: 45px;
+    }
+}
