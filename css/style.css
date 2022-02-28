@@ -74,8 +74,18 @@ h4 {
 .links ul li p {
     padding-top: 0;
     margin-top: 5px;
+    margin-bottom: 5px;
     color: #333333;
     font-size: 10pt;
+}
+
+.links ul li p.demo a {
+    font-weight: normal;
+    color: #666666;
+}
+
+.links ul li p.demo a:hover {
+    color: #007777;
 }
 
 section#main {
