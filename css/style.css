@@ -8,7 +8,7 @@
 
 body {
     font-family: "Open Sans", Helvetica, HelveticaNeue, HelveticaNeueCyr, "Noto Sans", sans-serif;
-    background-color: #fafafa;
+    background-color: #fdfdfd;
     padding: 0;
     margin: 0;
 }
@@ -25,7 +25,7 @@ a {
 }
 
 a:hover {
-    color:#990000;
+    color: #990000;
 }
 
 ul {
@@ -42,7 +42,6 @@ h1, h2, h3, h4, h5, h6 {
     font-family: Lora, Garamond, serif;
 }
 
-
 h3 {
     font-size: 16pt;
     margin-bottom: 15px;
@@ -50,6 +49,10 @@ h3 {
 
 h4 {
     font-size: 14pt;
+}
+
+.accordion h4 {
+    margin: 0;
 }
 
 #info-links ul {
@@ -112,7 +115,94 @@ section#info p {
     color: #333333;
 }
 
-@media screen and (max-width: 850px){
+/*accordion*/
+
+.accordion {
+    width: 100%;
+}
+
+.accordion input {
+    display: none;
+}
+
+.accordion-item {
+    position: relative;
+}
+
+.accordion-header {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    display: block;
+    cursor: pointer;
+    border-bottom: 1px solid #cecece;
+    color: #333333;
+}
+
+.accordion-text {
+    width: 100%;
+    font-size: 11pt;
+    color: #555555;
+    display: block;
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+    position: relative;
+    top: -10px;
+    background: #fafafa;
+}
+
+.accordion-text > div {
+    padding: 30px;
+}
+
+.closing {
+    position: absolute;
+    height: 50px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    display: none;
+}
+
+input:checked + .accordion-item {
+    height: auto;
+}
+
+input:checked + .accordion-item .accordion-text,
+input:checked + .accordion-item .closing {
+    display: block;
+}
+
+input:checked + .accordion-item .accordion-text {
+    height: auto;
+    opacity: 1;
+    top: 0;
+}
+
+.dropdown-arrows section .accordion-header {
+    padding: 0 0 0 30px;
+}
+
+.dropdown-arrows section .accordion-header:before {
+    position: absolute;
+    display: block;
+    content: '\203a';
+    font-size: 18pt;
+    left: 12px;
+    top: -2px;
+    color: #333333;
+}
+
+input:checked + section.accordion-item .accordion-header:before {
+    transform: rotate(90deg);
+    top: 1px;
+}
+
+/*media*/
+
+@media screen and (max-width: 850px) {
     section#main {
         flex-direction: column;
     }
@@ -124,5 +214,9 @@ section#info p {
 
     #info-links ul li {
         line-height: 45px;
+    }
+
+    .accordion-text > div {
+        padding: 30px 0;
     }
 }
