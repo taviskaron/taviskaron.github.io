@@ -69,6 +69,23 @@ h4 {
     margin-right: 5px;
 }
 
+.links ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.links ul li {
+    flex-basis: 50%;
+}
+
+.links ul li:nth-child(odd) {
+    padding-right: 20px;
+}
+
+.links ul li:nth-child(even) {
+    padding-left: 20px;
+}
+
 .links ul li a {
     font-weight: bold;
     text-decoration: underline;
